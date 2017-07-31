@@ -1,6 +1,3 @@
+from collections import namedtuple
 
-class Member(object):
-    def __init__(self, fullname=None, address=None, digest=None):
-        self.fullname = fullname
-        self.address = address
-        self.digest = digest
+Member = namedtuple('Member', ['fullname', 'address', 'digest'])
