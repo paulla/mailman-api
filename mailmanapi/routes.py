@@ -37,6 +37,7 @@ def get_application(allowed_ips):
     bottle_app = default_app()
 
     if '*' in allowed_ips:
+        create_routes(bottle_app)
         return bottle_app
 
     def application(environ, start_response):
